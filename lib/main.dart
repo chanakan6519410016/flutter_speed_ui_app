@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_ui_app/view/a01_page_ui.dart';
 import 'package:flutter_speed_ui_app/view/a02_page_ui.dart';
+import 'package:flutter_speed_ui_app/view/b01_page_ui.dart';
 import 'package:flutter_speed_ui_app/view/home_ui.dart';
 
 void main() {
@@ -21,7 +22,7 @@ class _flutter_speed_ui_appState extends State<flutter_speed_ui_app> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: A02PageUi(),
+      home: B01PageUi(),
     );
   }
 }

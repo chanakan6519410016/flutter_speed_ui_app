@@ -106,21 +106,64 @@ class _A02PageUiState extends State<A02PageUi> {
             Row(
               children: [
                 Expanded(
-                  child: Divider(
-                      thickness: 1,
-                      color: const Color.fromARGB(255, 240, 126, 164)),
+                  child: Container(
+                    height: 1,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          Color.fromARGB(0, 0, 0, 0),
+                          Color.fromARGB(255, 233, 140, 202),
+                          Color.fromARGB(255, 182, 65, 137),
+                        ],
+                      ),
+                    ),
+                  ),
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 10),
-                  child: Text('Or Sigh up With'),
+                  child: Text(
+                    'Or Sign up With',
+                    style: TextStyle(
+                      color: Colors.black,
+                    ),
+                  ),
                 ),
                 Expanded(
-                  child: Divider(
-                      thickness: 1,
-                      color: const Color.fromARGB(255, 223, 161, 181)),
+                  child: Container(
+                    height: 1,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          Color.fromARGB(255, 182, 65, 137),
+                          Color.fromARGB(255, 233, 140, 202),
+                          Color.fromARGB(0, 0, 0, 0),
+                        ],
+                      ),
+                    ),
+                  ),
                 ),
               ],
-            )
+            ),
+            SizedBox(height: 18),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(
+                  icon: Image.asset('assets/images/imga2.png'),
+                  onPressed: () {},
+                ),
+                SizedBox(height: 18),
+                IconButton(
+                  icon: Image.asset('assets/images/imga3.png'),
+                  onPressed: () {},
+                ),
+                SizedBox(height: 18),
+                IconButton(
+                  icon: Image.asset('assets/images/imga4.png'),
+                  onPressed: () {},
+                ),
+              ],
+            ),
           ],
         ),
       ),

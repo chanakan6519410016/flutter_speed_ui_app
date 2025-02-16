@@ -19,6 +19,20 @@ class _A02PageUiState extends State<A02PageUi> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Align(
+              alignment: Alignment.centerLeft,
+              child: IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: Icon(
+                  Icons.arrow_back_ios,
+                  size: MediaQuery.of(context).size.height * 0.04,
+                  color: const Color.fromARGB(255, 0, 0, 0),
+                ),
+              ),
+            ),
+            SizedBox(height: 80),
             // Welcome Back
             Text(
               'Welcome Back',

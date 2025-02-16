@@ -16,6 +16,20 @@ class _A01PageUiState extends State<A01PageUi> {
         mainAxisAlignment: MainAxisAlignment.center,
         // ignore: sort_child_properties_last
         children: [
+          Align(
+            alignment: Alignment.centerLeft,
+            child: IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(
+                Icons.arrow_back_ios,
+                size: MediaQuery.of(context).size.height * 0.04,
+                color: const Color.fromARGB(255, 0, 0, 0),
+              ),
+            ),
+          ),
+          SizedBox(height: 80),
           Expanded(
             flex: 4,
             child: Container(
@@ -49,7 +63,7 @@ class _A01PageUiState extends State<A01PageUi> {
                   ),
                 ),
                 Text(
-                  "Own Dream House",
+                  'Own Dream House',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 22,
@@ -86,7 +100,7 @@ class _A01PageUiState extends State<A01PageUi> {
                       padding: EdgeInsets.symmetric(vertical: 15),
                     ),
                     child: Text(
-                      "Sign in",
+                      'Sign in',
                       style: TextStyle(color: Colors.white),
                     ),
                   ),

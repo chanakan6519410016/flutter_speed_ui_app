@@ -15,6 +15,20 @@ class _B01PageUiState extends State<B01PageUi> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          Align(
+            alignment: Alignment.centerLeft,
+            child: IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(
+                Icons.arrow_back_ios,
+                size: MediaQuery.of(context).size.height * 0.04,
+                color: const Color.fromARGB(255, 0, 0, 0),
+              ),
+            ),
+          ),
+          SizedBox(height: 80),
           Image.asset(
             'assets/images/imgb1.png',
             height: MediaQuery.of(context).size.height * 0.4,
@@ -41,6 +55,48 @@ class _B01PageUiState extends State<B01PageUi> {
                   style: TextStyle(
                     fontSize: 15,
                     color: Colors.black,
+                  ),
+                ),
+                SizedBox(height: 40),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Color.fromARGB(255, 62, 13, 236),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            padding: EdgeInsets.symmetric(vertical: 15),
+                          ),
+                          child: Text(
+                            'Login',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 20),
+                      Expanded(
+                        child: OutlinedButton(
+                          onPressed: () {},
+                          style: OutlinedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            padding: EdgeInsets.symmetric(vertical: 15),
+                          ),
+                          child: Text(
+                            'Register',
+                            style: TextStyle(
+                              color: Color.fromARGB(255, 0, 0, 0),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ],

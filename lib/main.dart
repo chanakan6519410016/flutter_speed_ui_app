@@ -7,6 +7,10 @@ import 'package:flutter_speed_ui_app/view/b03_page_ui.dart';
 import 'package:flutter_speed_ui_app/view/c01_page_ui.dart';
 import 'package:flutter_speed_ui_app/view/c02_page_ui.dart';
 import 'package:flutter_speed_ui_app/view/c03_page_ui.dart';
+import 'package:flutter_speed_ui_app/view/d01_page_ui.dart';
+import 'package:flutter_speed_ui_app/view/d02_page_ui.dart';
+import 'package:flutter_speed_ui_app/view/d03_page_ui.dart';
+import 'package:flutter_speed_ui_app/view/d04_page_ui.dart';
 import 'package:flutter_speed_ui_app/view/home_ui.dart';
 
 void main() {
@@ -27,7 +31,7 @@ class _flutter_speed_ui_appState extends State<flutter_speed_ui_app> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: C03PageUi(),
+      home: D04PageUi(),
     );
   }
 }

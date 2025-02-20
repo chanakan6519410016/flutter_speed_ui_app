@@ -11,6 +11,7 @@ class _D03PageUiState extends State<D03PageUi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
@@ -27,6 +28,7 @@ class _D03PageUiState extends State<D03PageUi> {
                 ),
               ),
             ),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.025),
             Align(
               alignment: Alignment.centerLeft,
               child: Text(

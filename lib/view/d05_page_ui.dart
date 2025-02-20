@@ -1,21 +1,19 @@
 import 'package:flutter/material.dart';
 
-class D04PageUi extends StatefulWidget {
-  const D04PageUi({super.key});
+class D05PageUi extends StatefulWidget {
+  const D05PageUi({super.key});
 
   @override
-  State<D04PageUi> createState() => _D04PageUiState();
+  State<D05PageUi> createState() => _D05PageUiState();
 }
 
-class _D04PageUiState extends State<D04PageUi> {
+class _D05PageUiState extends State<D05PageUi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Align(
@@ -32,7 +30,7 @@ class _D04PageUiState extends State<D04PageUi> {
             Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                'Forgot Password? ',
+                'OTP Verification',
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                 textAlign: TextAlign.center,
               ),
@@ -41,7 +39,7 @@ class _D04PageUiState extends State<D04PageUi> {
             Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                'Don\'t worry! lt occurs. Please enter the email',
+                'Enter the verification code we just sent on ',
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
@@ -53,7 +51,7 @@ class _D04PageUiState extends State<D04PageUi> {
             Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                'address linked with your account.',
+                'your email address.',
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
@@ -63,12 +61,24 @@ class _D04PageUiState extends State<D04PageUi> {
               ),
             ),
             SizedBox(height: 30),
-            TextField(
-              decoration: InputDecoration(
-                hintText: 'Enter your email',
-                border:
-                    OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: List.generate(4, (index) {
+                return SizedBox(
+                  width: 65,
+                  height: 70,
+                  child: TextField(
+                    textAlign: TextAlign.center,
+                    keyboardType: TextInputType.number,
+                    maxLength: 1,
+                    decoration: InputDecoration(
+                      counterText: '',
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                    ),
+                  ),
+                );
+              }),
             ),
             SizedBox(height: 30),
             SizedBox(
@@ -81,31 +91,10 @@ class _D04PageUiState extends State<D04PageUi> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8.0))),
                 child: Text(
-                  'Send Code',
+                  'Verify',
                   style: TextStyle(color: Colors.white, fontSize: 15),
                 ),
               ),
-            ),
-            SizedBox(height: MediaQuery.of(context).size.height * 0.40),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('Remember Password?'),
-                GestureDetector(
-                  onTap: () {},
-                  child: TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Login ',
-                      style: TextStyle(
-                        color: Colors.blue,
-                        fontWeight: FontWeight.bold,
-                        fontSize: MediaQuery.of(context).size.width * 0.035,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
             ),
           ],
         ),

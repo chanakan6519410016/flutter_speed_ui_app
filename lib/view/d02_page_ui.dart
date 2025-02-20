@@ -11,6 +11,7 @@ class _D02PageUiState extends State<D02PageUi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
@@ -125,7 +126,7 @@ class _D02PageUiState extends State<D02PageUi> {
                   child: TextButton(
                     onPressed: () {},
                     child: Text(
-                      'Register now',
+                      'Register Now',
                       style: TextStyle(
                         color: Colors.blue,
                         fontWeight: FontWeight.bold,

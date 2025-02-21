@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/view/e01_page_ui.dart';
 import 'package:flutter_speed_ui_app/view/e03_page_ui.dart';
 import 'package:flutter_speed_ui_app/view/e04_page_ui.dart';
 
@@ -33,7 +34,10 @@ class _E02PageUiState extends State<E02PageUi> {
                     alignment: Alignment.centerLeft,
                     child: IconButton(
                       onPressed: () {
-                        Navigator.pop(context);
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => E01PageUi()),
+                        );
                       },
                       icon: Icon(
                         Icons.arrow_back_ios,
@@ -193,7 +197,7 @@ class _E02PageUiState extends State<E02PageUi> {
                           child: Text(
                             'Register Now',
                             style: TextStyle(
-                              color: Colors.blue,
+                              color: Colors.orange,
                               fontWeight: FontWeight.bold,
                               fontSize:
                                   MediaQuery.of(context).size.width * 0.035,

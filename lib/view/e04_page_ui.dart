@@ -110,7 +110,13 @@ class _E04PageUiState extends State<E04PageUi> {
                           );
                         },
                         child: TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => E03PageUi()),
+                            );
+                          },
                           child: Text(
                             'Create Account',
                             style: TextStyle(

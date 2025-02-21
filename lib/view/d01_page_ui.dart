@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_ui_app/view/d02_page_ui.dart';
 import 'package:flutter_speed_ui_app/view/d03_page_ui.dart';
+import 'package:flutter_speed_ui_app/view/home_ui.dart';
 
 class D01PageUi extends StatefulWidget {
   const D01PageUi({super.key});
@@ -19,7 +20,10 @@ class _D01PageUiState extends State<D01PageUi> {
             alignment: Alignment.centerLeft,
             child: IconButton(
               onPressed: () {
-                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomeUI()),
+                );
               },
               icon: Icon(
                 Icons.arrow_back_ios,

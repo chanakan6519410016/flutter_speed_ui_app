@@ -137,7 +137,7 @@ class _D03PageUiState extends State<D03PageUi> {
                 ),
               ],
             ),
-            SizedBox(height: 35),
+            SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

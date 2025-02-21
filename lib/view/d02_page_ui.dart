@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/view/d01_page_ui.dart';
 import 'package:flutter_speed_ui_app/view/d03_page_ui.dart';
 import 'package:flutter_speed_ui_app/view/d04_page_ui.dart';
 
@@ -24,7 +25,10 @@ class _D02PageUiState extends State<D02PageUi> {
               alignment: Alignment.centerLeft,
               child: IconButton(
                 onPressed: () {
-                  Navigator.pop(context);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => D01PageUi()),
+                  );
                 },
                 icon: Icon(
                   Icons.arrow_back_ios,

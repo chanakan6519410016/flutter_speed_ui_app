@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_ui_app/view/c03_page_ui.dart';
 import 'package:flutter_speed_ui_app/view/home_ui.dart';
@@ -34,7 +32,7 @@ class _C02PageUiState extends State<C02PageUi> {
                     icon: Icon(
                       Icons.arrow_back_ios,
                       size: MediaQuery.of(context).size.height * 0.04,
-                      color: const Color.fromARGB(255, 0, 0, 0),
+                      color: Color.fromARGB(255, 0, 0, 0),
                     ),
                   ),
                 ),
@@ -105,23 +103,17 @@ class _C02PageUiState extends State<C02PageUi> {
                   children: [
                     IconButton(
                       icon: Image.asset('assets/images/imgc3.png'),
-                      onPressed: () {
-                        // Google sign in
-                      },
+                      onPressed: () {},
                     ),
                     SizedBox(width: 16),
                     IconButton(
                       icon: Image.asset('assets/images/imgc4.png'),
-                      onPressed: () {
-                        // Facebook sign in
-                      },
+                      onPressed: () {},
                     ),
                     SizedBox(width: 16),
                     IconButton(
                       icon: Image.asset('assets/images/imgc5.png'),
-                      onPressed: () {
-                        // Twitter sign in
-                      },
+                      onPressed: () {},
                     ),
                   ],
                 ),

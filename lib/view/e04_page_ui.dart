@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/view/e03_page_ui.dart';
+import 'package:flutter_speed_ui_app/view/e05_page_ui.dart';
 
 class E04PageUi extends StatefulWidget {
   const E04PageUi({super.key});
@@ -29,7 +31,9 @@ class _E04PageUiState extends State<E04PageUi> {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
                       icon: Icon(
                         Icons.arrow_back_ios,
                         size: MediaQuery.of(context).size.height * 0.04,
@@ -71,7 +75,12 @@ class _E04PageUiState extends State<E04PageUi> {
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => E05PageUi()),
+                        );
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.orange,
                         shape: RoundedRectangleBorder(
@@ -85,13 +94,21 @@ class _E04PageUiState extends State<E04PageUi> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 80),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.2,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text('Don’t have an Account?'),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => E03PageUi()),
+                          );
+                        },
                         child: TextButton(
                           onPressed: () {},
                           child: Text(

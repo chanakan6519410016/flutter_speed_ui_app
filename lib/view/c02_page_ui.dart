@@ -1,6 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/view/c03_page_ui.dart';
+import 'package:flutter_speed_ui_app/view/home_ui.dart';
 
 class C02PageUi extends StatefulWidget {
   const C02PageUi({super.key});
@@ -24,7 +26,10 @@ class _C02PageUiState extends State<C02PageUi> {
                   alignment: Alignment.centerLeft,
                   child: IconButton(
                     onPressed: () {
-                      Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => HomeUI()),
+                      );
                     },
                     icon: Icon(
                       Icons.arrow_back_ios,
@@ -132,7 +137,12 @@ class _C02PageUiState extends State<C02PageUi> {
                       ),
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => C03PageUi()),
+                        );
+                      },
                       child: Text(
                         'Sign Up',
                         style: TextStyle(

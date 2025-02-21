@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/view/e03_page_ui.dart';
+import 'package:flutter_speed_ui_app/view/e04_page_ui.dart';
 
 class E02PageUi extends StatefulWidget {
   const E02PageUi({super.key});
@@ -19,7 +21,7 @@ class _E02PageUiState extends State<E02PageUi> {
             Stack(
               children: [
                 Image.asset(
-                  'assets/images/imge2.png', // ใส่รูปภาพของคุณ
+                  'assets/images/imge2.png',
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height * 0.4,
                   fit: BoxFit.cover,
@@ -30,7 +32,9 @@ class _E02PageUiState extends State<E02PageUi> {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
                       icon: Icon(
                         Icons.arrow_back_ios,
                         size: MediaQuery.of(context).size.height * 0.04,
@@ -92,7 +96,13 @@ class _E02PageUiState extends State<E02PageUi> {
                       Align(
                         alignment: Alignment.centerRight,
                         child: TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => E04PageUi()),
+                            );
+                          },
                           child: Text(
                             'Forgot Password?',
                             style: TextStyle(
@@ -173,7 +183,13 @@ class _E02PageUiState extends State<E02PageUi> {
                       GestureDetector(
                         onTap: () {},
                         child: TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => E03PageUi()),
+                            );
+                          },
                           child: Text(
                             'Register Now',
                             style: TextStyle(

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/view/d02_page_ui.dart';
+import 'package:flutter_speed_ui_app/view/d05_page_ui.dart';
 
 class D04PageUi extends StatefulWidget {
   const D04PageUi({super.key});
@@ -21,7 +23,9 @@ class _D04PageUiState extends State<D04PageUi> {
             Align(
               alignment: Alignment.centerLeft,
               child: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                },
                 icon: Icon(
                   Icons.arrow_back_ios,
                   size: MediaQuery.of(context).size.height * 0.04,
@@ -75,7 +79,12 @@ class _D04PageUiState extends State<D04PageUi> {
               width: double.infinity,
               height: 50,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => D05PageUi()),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.black,
                     shape: RoundedRectangleBorder(
@@ -94,7 +103,12 @@ class _D04PageUiState extends State<D04PageUi> {
                 GestureDetector(
                   onTap: () {},
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => D02PageUi()),
+                      );
+                    },
                     child: Text(
                       'Login ',
                       style: TextStyle(

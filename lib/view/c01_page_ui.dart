@@ -1,4 +1,7 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/view/c02_page_ui.dart';
 
 class C01PageUi extends StatefulWidget {
   const C01PageUi({super.key});
@@ -9,6 +12,20 @@ class C01PageUi extends StatefulWidget {
 
 class _C01PageUiState extends State<C01PageUi> {
   @override
+  void initState() {
+    super.initState();
+    Future.delayed(
+      Duration(seconds: 3),
+      () => Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => C02PageUi(),
+        ),
+      ),
+    );
+    super.initState();
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(

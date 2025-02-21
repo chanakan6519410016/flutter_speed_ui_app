@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/view/d02_page_ui.dart';
 
 class D03PageUi extends StatefulWidget {
   const D03PageUi({super.key});
@@ -21,7 +22,9 @@ class _D03PageUiState extends State<D03PageUi> {
             Align(
               alignment: Alignment.centerLeft,
               child: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                },
                 icon: Icon(
                   Icons.arrow_back_ios,
                   size: MediaQuery.of(context).size.height * 0.04,
@@ -142,7 +145,12 @@ class _D03PageUiState extends State<D03PageUi> {
                 GestureDetector(
                   onTap: () {},
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => D02PageUi()),
+                      );
+                    },
                     child: Text(
                       'Login Now',
                       style: TextStyle(

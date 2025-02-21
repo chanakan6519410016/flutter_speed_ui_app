@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/view/b02_page_ui.dart';
 
 class B03PageUi extends StatefulWidget {
   const B03PageUi({super.key});
@@ -121,10 +122,17 @@ class _B03PageUiState extends State<B03PageUi> {
                 SizedBox(height: 15),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 10),
-                  child: Text(
-                    'Already have an account',
-                    style: TextStyle(
-                      color: Colors.black,
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => B02PageUi()),
+                      );
+                    },
+                    child: Text(
+                      'Forgot Password?',
+                      style:
+                          TextStyle(color: const Color.fromARGB(255, 0, 0, 0)),
                     ),
                   ),
                 ),

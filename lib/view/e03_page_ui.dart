@@ -28,7 +28,9 @@ class _E03PageUiState extends State<E03PageUi> {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
                       icon: Icon(
                         Icons.arrow_back_ios,
                         size: MediaQuery.of(context).size.height * 0.04,

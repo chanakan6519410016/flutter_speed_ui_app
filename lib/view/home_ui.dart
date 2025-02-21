@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/view/a01_page_ui.dart';
+import 'package:flutter_speed_ui_app/view/b01_page_ui.dart';
+import 'package:flutter_speed_ui_app/view/c01_page_ui.dart';
+import 'package:flutter_speed_ui_app/view/d01_page_ui.dart';
+import 'package:flutter_speed_ui_app/view/e01_page_ui.dart';
 
 class HomeUI extends StatefulWidget {
   const HomeUI({super.key});
@@ -30,7 +35,12 @@ class _HomeUIState extends State<HomeUI> {
               ),
               SizedBox(height: MediaQuery.of(context).size.height * 0.03),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => A01PageUi()),
+                  );
+                },
                 // ignore: sort_child_properties_last
                 child: Text(
                   'Go to A Page',
@@ -54,7 +64,12 @@ class _HomeUIState extends State<HomeUI> {
               ),
               SizedBox(height: MediaQuery.of(context).size.height * 0.03),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => B01PageUi()),
+                  );
+                },
                 // ignore: sort_child_properties_last
                 child: Text(
                   'Go to B Page',
@@ -78,7 +93,12 @@ class _HomeUIState extends State<HomeUI> {
               ),
               SizedBox(height: MediaQuery.of(context).size.height * 0.03),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => C01PageUi()),
+                  );
+                },
                 // ignore: sort_child_properties_last
                 child: Text(
                   'Go to C Page',
@@ -102,7 +122,12 @@ class _HomeUIState extends State<HomeUI> {
               ),
               SizedBox(height: MediaQuery.of(context).size.height * 0.03),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => D01PageUi()),
+                  );
+                },
                 // ignore: sort_child_properties_last
                 child: Text(
                   'Go to D Page',
@@ -126,7 +151,12 @@ class _HomeUIState extends State<HomeUI> {
               ),
               SizedBox(height: MediaQuery.of(context).size.height * 0.03),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => E01PageUi()),
+                  );
+                },
                 // ignore: sort_child_properties_last
                 child: Text(
                   'Go to E Page',

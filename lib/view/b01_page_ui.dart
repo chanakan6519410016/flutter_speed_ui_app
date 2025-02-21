@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/view/b02_page_ui.dart';
+import 'package:flutter_speed_ui_app/view/b03_page_ui.dart';
+import 'package:flutter_speed_ui_app/view/home_ui.dart';
 
 class B01PageUi extends StatefulWidget {
   const B01PageUi({super.key});
@@ -19,7 +22,10 @@ class _B01PageUiState extends State<B01PageUi> {
             alignment: Alignment.centerLeft,
             child: IconButton(
               onPressed: () {
-                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomeUI()),
+                );
               },
               icon: Icon(
                 Icons.arrow_back_ios,
@@ -64,7 +70,13 @@ class _B01PageUiState extends State<B01PageUi> {
                     children: [
                       Expanded(
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => B02PageUi()),
+                            );
+                          },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Color.fromARGB(255, 62, 13, 236),
                             shape: RoundedRectangleBorder(
@@ -81,7 +93,13 @@ class _B01PageUiState extends State<B01PageUi> {
                       SizedBox(width: 20),
                       Expanded(
                         child: OutlinedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => B03PageUi()),
+                            );
+                          },
                           style: OutlinedButton.styleFrom(
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10),

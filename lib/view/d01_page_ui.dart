@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/view/d02_page_ui.dart';
+import 'package:flutter_speed_ui_app/view/d03_page_ui.dart';
 
 class D01PageUi extends StatefulWidget {
   const D01PageUi({super.key});
@@ -16,7 +18,9 @@ class _D01PageUiState extends State<D01PageUi> {
           Align(
             alignment: Alignment.centerLeft,
             child: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pop(context);
+              },
               icon: Icon(
                 Icons.arrow_back_ios,
                 size: MediaQuery.of(context).size.height * 0.04,
@@ -52,7 +56,13 @@ class _D01PageUiState extends State<D01PageUi> {
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => D02PageUi()),
+                          );
+                        },
                         style: ElevatedButton.styleFrom(
                           padding: EdgeInsets.symmetric(vertical: 14),
                           backgroundColor: Color(0xFF212121), // สีเทาเข้ม
@@ -70,7 +80,13 @@ class _D01PageUiState extends State<D01PageUi> {
                     SizedBox(
                       width: double.infinity,
                       child: OutlinedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => D03PageUi()),
+                          );
+                        },
                         style: OutlinedButton.styleFrom(
                           padding: EdgeInsets.symmetric(vertical: 14),
                           shape: RoundedRectangleBorder(

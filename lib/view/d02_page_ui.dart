@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/view/d03_page_ui.dart';
+import 'package:flutter_speed_ui_app/view/d04_page_ui.dart';
 
 class D02PageUi extends StatefulWidget {
   const D02PageUi({super.key});
@@ -21,7 +23,9 @@ class _D02PageUiState extends State<D02PageUi> {
             Align(
               alignment: Alignment.centerLeft,
               child: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                },
                 icon: Icon(
                   Icons.arrow_back_ios,
                   size: MediaQuery.of(context).size.height * 0.04,
@@ -58,7 +62,12 @@ class _D02PageUiState extends State<D02PageUi> {
             Align(
               alignment: Alignment.centerRight,
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => D04PageUi()),
+                  );
+                },
                 child: Text('Forgot Password?'),
               ),
             ),
@@ -124,7 +133,12 @@ class _D02PageUiState extends State<D02PageUi> {
                 GestureDetector(
                   onTap: () {},
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => D03PageUi()),
+                      );
+                    },
                     child: Text(
                       'Register Now',
                       style: TextStyle(

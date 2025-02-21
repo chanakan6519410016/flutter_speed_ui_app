@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/view/e02_page_ui.dart';
 
 class E01PageUi extends StatefulWidget {
   const E01PageUi({super.key});
@@ -21,7 +22,9 @@ class _E01PageUiState extends State<E01PageUi> {
             Align(
               alignment: Alignment.centerLeft,
               child: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                },
                 icon: Icon(
                   Icons.arrow_back_ios,
                   size: MediaQuery.of(context).size.height * 0.04,
@@ -71,7 +74,12 @@ class _E01PageUiState extends State<E01PageUi> {
               width: double.infinity,
               height: 50,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => E02PageUi()),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.orange,
                     shape: RoundedRectangleBorder(

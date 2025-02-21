@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/view/c02_page_ui.dart';
 
 class C03PageUi extends StatefulWidget {
   const C03PageUi({super.key});
@@ -180,7 +181,12 @@ class _C03PageUiState extends State<C03PageUi> {
                     ),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => C02PageUi()),
+                      );
+                    },
                     child: Text(
                       'Sign Up',
                       style: TextStyle(
